@@ -45,8 +45,14 @@
         @RenderBody()
         <hr />
         <footer>
+            @*Even though the view component class is called RestaurantCount the declaration here must be lower case.
+        So the "r" is lowercase and the "c". Since the actual class name has an uppercase "C" we also need to include the "-" so it can find the view.
+        Also, if the view component takes in a parameter it can be added to the declaration like:<vc:restaurant-count {parameter name}=""></vc:restaurant-count>
+            *@
+            <vc:restaurant-count></vc:restaurant-count>
             @RenderSection("footer", false)
             <p>&copy; 2019 - OdeToFood</p>
+            <img src="~/images/OdeToFood.png"/>
         </footer>
     </div>
 
